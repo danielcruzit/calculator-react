@@ -141,62 +141,45 @@ class App extends React.Component {
 
   buttonOpAction = (op) => {
     console.log(this.state.count);
+
     switch (op) {
       case "+":
+        var b = this.state.count[this.state.count.length-1]
+        if (b === '+' || b === '-' || b === '*' || b === '/' || b === '%') {
+           return 
+          }; 
         break;
       case "-":
+        var b = this.state.count[this.state.count.length-1]
+        if (b === '+' || b === '-' || b === '*' || b === '/' || b === '%') {
+           return 
+          }; 
         break;
       case "x":
-        this.setState((state) => ({
-          count: this.state.count + "*",
-        }));
-        return;
+        var b = this.state.count[this.state.count.length-1]
+        if (b === '+' || b === '-' || b === '*' || b === '/' || b === '%') {
+           return 
+          }; 
+        break;
       case "÷":
+        var b = this.state.count[this.state.count.length-1]
+        if (b === '+' || b === '-' || b === '*' || b === '/' || b === '%') {
+           return 
+          }; 
         this.setState((state) => ({
           count: this.state.count + "/",
         }));
         return;
       case "%":
+        var b = this.state.count[this.state.count.length-1]
+        if (b === '+' || b === '-' || b === '*' || b === '/' || b === '%') {
+           return 
+          }; 
         break;
       case "=":
-        console.log("faz a conta");
-        //split string to get all numbers separeted from ops
-        // var tmp = this.state.count.split()
-        // var tmp  =  this.state.count.replace(/[0-9]+/g, "#").replace(/[\(|\|\.)]/g, "");
-        // var copy = this.state.count;
-        // var numbers = copy.split(/[^0-9\.]+/);
-        // var operators = tmp.split("#").filter(function(n){return n});
-        // var result = [];
-
-        // for(let i = 0; i < numbers.length; i++){
-        //     result.push(numbers[i]);
-        //     if (i < operators.length) result.push(operators[i]);
-        // }
-        // console.log(result);
-        
-        // let a = result.length;
-        // let final = 0;
-        // do {
-        //   if (result.length == a) {
-        //     let um = result.pop();
-        //     let dois = result.pop();
-        //     let tres =  result.pop();
-        //     final = um + dois + tres;
-        //   } 
-        //   else {
-        //     let um = result.pop();
-        //     let dois = result.pop();
-        //     final = final + um + dois;
-        //   }
-        // } while(result.length != 0)
-
-        // this.setState((state) => ({
-        //   count: result,
-        // }));
         this.setState((state) => ({
           count: eval(this.state.count),
         }));
-        return;
         return;
       case "+/-":
         this.setState((state) => ({
